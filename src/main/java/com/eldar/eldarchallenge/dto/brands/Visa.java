@@ -9,7 +9,7 @@ public class Visa implements IBrand {
     @Override
     public Double taxAmount() {
         LocalDate today = LocalDate.now();
-        return (double) today.getMonthValue() * 0.1;
+        return (double) (today.getYear() % 100)/(today.getMonthValue());
     }
 
 }

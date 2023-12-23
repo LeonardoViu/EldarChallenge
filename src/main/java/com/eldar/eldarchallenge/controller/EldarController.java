@@ -22,9 +22,7 @@ public class EldarController {
             Card card = eldarService.findById(cardNumber);
             if (eldarService.isCardValid(card.getExpireDate())) {
                 Double tax = eldarService.taxAmount();
-                System.out.println("TAX: " + tax);
                 ResponseDTO response = new ResponseDTO(amount * tax, card);
-                System.out.println("AMOUNT TO RETURN:" + response.getAmountToReturn());
                 return new ResponseEntity<ResponseDTO>(response, HttpStatus.OK);
             }
             throw new DateExpiredException("The card is expired");

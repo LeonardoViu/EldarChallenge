@@ -10,6 +10,6 @@ public class Amex implements IBrand {
     @Override
     public Double taxAmount() {
         LocalDate today = LocalDate.now();
-        return (double) (today.getYear() % 100)/(today.getMonthValue());
+        return (double) today.getMonthValue() * 0.1;
     }
 }
