@@ -1,1 +1,1 @@
-Eldar Challenge, con patrones Strategy y Command
+Eldar Challenge
