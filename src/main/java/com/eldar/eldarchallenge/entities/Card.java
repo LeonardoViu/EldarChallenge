@@ -17,12 +17,13 @@ import java.util.Date;
 @AllArgsConstructor
 public class Card {
     @Id
-    public Long cardNumber;
+    private Long cardNumber;
     @Column
-    public String fullName;
+    private String fullName;
     @Column
-    public Date expireDate;
+
+    private Date expireDate;
     @Column
-    public String brand;
+    private String brand;
 
 }

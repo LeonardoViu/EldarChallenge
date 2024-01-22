@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class ResponseDTO extends Card {
 
-    Double amountToReturn;
+    private Double amountToReturn;
 
     public ResponseDTO(double amount, Card card) {
         super.setBrand(card.getBrand());

@@ -1,10 +1,11 @@
-package com.eldar.eldarchallenge.dto.brands;
+package com.eldar.eldarchallenge.components.brands;
 
-import com.eldar.eldarchallenge.dto.inter.IBrand;
+import com.eldar.eldarchallenge.components.inter.IBrand;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.util.Date;
 
+@Component
 public class Amex implements IBrand {
 
     @Override

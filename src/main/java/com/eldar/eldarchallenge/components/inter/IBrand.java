@@ -1,4 +1,4 @@
-package com.eldar.eldarchallenge.dto.inter;
+package com.eldar.eldarchallenge.components.inter;
 
 public interface IBrand {
 

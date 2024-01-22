@@ -21,19 +21,22 @@ public class EldarChallengeApplication {
         SpringApplication.run(EldarChallengeApplication.class, args);
     }
 
+    //El método initData() está anotado con @Bean y devuelve una instancia de CommandLineRunner.
+    //Este bean se registra automáticamente en el contexto de Spring y se ejecuta al inicio de la app.
+    //Cuando la aplicación arranca, Spring ejecutará automáticamente el método run de la interfaz
+    //CLR, que a su vez ejecuta el código dentro del lambda (lambda seria la implementación
+    // del metodo run de la interfaz funcional CLR)
     @Bean
     public CommandLineRunner initData() {
-        return (args) -> { setDB();
-        };
+        return (args) -> { setDB(); };
     }
 
     public void setDB(){
 
         Calendar calendar1 = Calendar.getInstance();
-        calendar1.set(2024, Calendar.JANUARY, 1);
-
+        calendar1.set(2025, Calendar.JANUARY, 1);
         Calendar calendar2 = Calendar.getInstance();
-        calendar2.set(2024, Calendar.MARCH, 1);
+        calendar2.set(2025, Calendar.MARCH, 1);
 
         cardRep.save(new Card(1234567890L, "John Doe", calendar1.getTime(), "Visa"));
         cardRep.save(new Card(9876543210L, "Jane Smith", calendar2.getTime(), "Amex"));
