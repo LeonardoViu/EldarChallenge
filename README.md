@@ -1,6 +1,6 @@
 Eldar Challenge
 
-Mockee 3 valores en la base de datos H2, Hace falta el header "Content-Type: Application/json" para que funcione; en local probar:
+I mocked 3 rows in the H2 database, it has 1 GET endpoint (you need the header "Content-Type: Application/json"); in local try:
 
 localhost:8080/1234567890?amount=800
 
